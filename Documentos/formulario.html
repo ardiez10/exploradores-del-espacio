@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/estilo.css" rel="stylesheet" type="text/css" title="Estilos">
+    <title>Formulario de Inscripción</title>
+</head>
+<body>
+    <header>
+        <a href="../principal.html"><img class="logo" src="../Imagen/logoDegrad.png" alt="logo"></a>
+        <p class="tituloWeb">EXPLORADORES DEL ESPACIO</p>
+    </header>
+    <!-- Panel lateral de navegación -->
+    <nav id="navLateral">
+        <ul>
+            <li><a href="../Documentos/mas_info.html" class="neonText">Astronautas</a></li>
+            <li><a href="../Documentos/detalle.html" class="neonText">Estación Espacial ISS</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Anexo:Telescopios_espaciales" target="_blank" class="neonText">Telescopios</a></li>
+            <li><a href="../Documentos/tabla.html" class="neonText">Hitos históricos</a></li>
+            <li><a id="clubExpl" href="../Documentos/formulario.html" style="background-color: #e93595;">¡Únete al Club de Exploradores Espaciales!</a></li>
+        </ul>
+        
+        <a href="../Documentos/formulario.html"><img src="../Imagen/LogoAstro.png" id="imagenAstroLogo" alt="logo neon astronauta sentado en luna"></a>
+        <p id="cssValido">
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="Valid CSS!">
+                </a>
+        </p>
+        <img id="astrogif" src="../Imagen/astrogif.gif" alt="gif astronauta bailando">
+    </nav>
+    <div id="arriba"></div>
+    <main>
+    
+        <p id="introFormulario" class="parrafo">
+            <strong>¡Únete al Club de Exploradores Espaciales y descubre el universo!</strong><br>
+            Si eres un apasionado del espacio, los astronautas y las aventuras cósmicas, este es el lugar perfecto para ti. En el <strong>Club de Exploradores Espaciales</strong>, celebramos la exploración del cosmos, descubrimos nuevas tecnologías y compartimos nuestra pasión por el espacio.<br>
+            
+            Como miembro del club, disfrutarás de beneficios exclusivos, como:
+        </p>
+            <ul id="listaFormulario">
+                <li>🚀 Acceso a eventos espaciales: charlas, talleres y observaciones astronómicas.</li>
+                <li>📚 Recursos únicos: manuales, documentales y guías de exploración espacial.</li>
+                <li>🪐 Comunidad activa: conecta con otros jóvenes exploradores espaciales.</li>
+            </ul>         
+        <p class="parrafo">
+            Completa el formulario con tus preferencias, datos personales y tipo de suscripción, y sé parte de esta comunidad única que mantiene viva la pasión por la exploración espacial. ¡Te estamos esperando!
+        </p>
+        <form method="get">
+            <fieldset>
+                <legend><h3 class="leyenda">Datos de Inscripción</h3></legend>
+                    <label>Interés favorito:</label>
+                    <select name="sistema" required autofocus tabindex="1">
+                        <option value="" selected>Planetas</option>
+                        <option>Astronautas</option>
+                        <option>Naves Espaciales</option>
+                        <option>Estrellas</option>
+                        <option>Cometas</option>
+                    </select>
+                <p>
+                    <label>Proyecto favorito:</label>
+                    <input type="text" name="proyectoFavorito" required tabindex="2" placeholder="Ej: Construcción de cohetes"><br>
+                    
+                    <label>Nivel de interés:</label>
+                    <select name="nivelInteres" tabindex="3">
+                        <option value="principiante">Principiante</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="avanzado">Avanzado</option>
+                    </select>
+                </p>
+                <fieldset>
+                    <legend><h4 class="leyenda">Detalles de Suscripción</h4></legend>
+                    <p>
+                        <label>Tipo de suscripción:</label><br>
+                        <input class="formulario" type="radio" name="tipoMembresia" tabindex="4">Básica
+                        <input class="formulario" type="radio" name="tipoMembresia">Premium
+                    </p>
+                    <p>
+                        <label>Método de pago:</label>
+                        <select name="pago" tabindex="5">
+                            <option value="tarjeta">Tarjeta de crédito</option>
+                            <option value="paypal">Paypal</option>
+                            <option value="transferencia">Transferencia bancaria</option>
+                        </select>
+                    </p>
+                </fieldset>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><h3 class="leyenda">Información del Explorador</h3></legend>
+                <p>
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" required tabindex="6"><br>
+                
+                    <label>Primer apellido:</label>
+                    <input type="text" name="apellido1" required size="35" tabindex="7">
+                    <label class="formulario2">Segundo apellido:</label>
+                    <input type="text" name="apellido2" size="35" tabindex="8"><br>
+                    <label>Teléfono:</label>
+                    <input class="formulario2" type="tel" name="telefono" required size="35" tabindex="9">
+                    <label>Correo electrónico:</label>
+                    <input type="email" name="email" required size="35" value="@" tabindex="10">
+                </p>
+                <fieldset>
+                    <legend><h4 class="leyenda">Dirección de Contacto</h4></legend>
+                    <p>
+                        <label>Calle:</label>
+                        <input type="text" name="calle" required size="55" tabindex="11">
+                        <label>Número:</label>
+                        <input class="casillaNum" type="number" name="num" tabindex="12">
+                        <label>Piso:</label>
+                        <input class="casillaNum" type="number" name="piso" min="0" tabindex="13">
+                        <label>Letra:</label>
+                        <input type="text" name="letra" size="5" tabindex="14"><br>
+                        
+                        <label>Localidad:</label>
+                        <input type="text" name="localidad" required tabindex="15">
+                        <label>Código postal:</label>
+                        <input type="text" name="cp" required tabindex="16">
+                        <label>País:</label>
+                        <select name="país" tabindex="17">
+                            <option value="">Selecciona el país</option>
+                            <option value="España">España</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Francia">Francia</option>
+                        </select>
+                    </p>
+                </fieldset>
+            </fieldset>
+            <p class="parrafo">
+                <input type="checkbox" name="tyc">
+                <label tabindex="18">Acepto los términos y condiciones.</label><br>
+                <input type="checkbox" name="notificaciones">
+                <label tabindex="19">Acepto recibir notificaciones sobre eventos retro.</label><br>
+            </p>
+            <p class="botoncent">
+                <input class="inputBoton" type="submit" value="Enviar Inscripción" tabindex="20">
+                <input class="inputBoton" type="reset" value="Borrar campos" tabindex="21">
+            </p>
+            <p class="volver" tabindex="22">
+                <a href="../principal.html">Ir a la página principal</a>
+            </p>
+        </form>        
+        <footer>
+            <hr>
+            <p class="copy">&copy; <a href="mailto:alba.r.diez@gmail.com">Alba Rodr&iacute;guez D&iacute;ez</a> 2024</p>
+        </footer>
+    </main>
+</body>
+</html>
